@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - JavaScript Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h2>QuizMaster</h2>
+        <button id="themeToggle">Light Mode</button>
+    </header>
+
+    <main>
+
+        <!-- Start Screen -->
+        <section id="startScreen">
+            <h1>Test Your JavaScript Skills!</h1>
+            <p>Challenge yourself with 10 JavaScript questions.</p>
+            <p class="info">60 seconds • 10 questions</p>
+
+            <h3 id="highScore">Your Best Score: 0/10</h3>
+
+            <button id="startBtn" class="primary-btn">Start Quiz</button>
+        </section>
+
+
+        <!-- Quiz Screen -->
+        <section id="quizScreen" class="hidden">
+
+            <div class="quiz-top">
+                <h2 id="questionCounter">Question 1 of 10</h2>
+                <div class="timer">
+                    Time: <span id="timer">60</span>s
+                </div>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+
+            <h3 id="questionText"></h3>
+
+            <div id="optionsContainer"></div>
+
+            <p id="feedback"></p>
+
+            <div class="navigation">
+                <button id="previousBtn">Previous</button>
+                <button id="nextBtn" class="primary-btn">Next</button>
+            </div>
+
+        </section>
+
+
+        <!-- Result Screen -->
+        <section id="resultScreen" class="hidden">
+
+            <h1>Quiz Completed!</h1>
+
+            <h2 id="finalScore"></h2>
+            <p id="finalPercent"></p>
+
+            <h3 id="resultHighScore"></h3>
+
+            <h2 class="review-heading">Answer Review</h2>
+
+            <div id="reviewContainer"></div>
+
+            <button id="restartBtn" class="primary-btn">
+                Restart Quiz
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>QuizMaster | JavaScript Quiz Application</p>
+    </footer>
+
+</body>
+</html>

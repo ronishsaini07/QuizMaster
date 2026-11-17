@@ -1,0 +1,310 @@
+
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #10111b;
+    color: white;
+    min-height: 100vh;
+    transition: 0.3s;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #303044;
+}
+
+header h2 {
+    color: #9685ff;
+    font-size: 26px;
+}
+
+
+/* Buttons */
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover:not(:disabled) {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#themeToggle {
+    background: #292a3b;
+    color: white;
+}
+
+.primary-btn {
+    background: #7865ed;
+    color: white;
+}
+
+
+/* Main Area */
+
+main {
+    width: 90%;
+    max-width: 750px;
+    margin: 70px auto;
+}
+
+section {
+    background: #191b29;
+    padding: 40px;
+    border-radius: 18px;
+    border: 1px solid #303044;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #aaaabd;
+    margin-bottom: 20px;
+}
+
+.info {
+    margin-top: 15px;
+}
+
+#highScore {
+    margin: 25px 0;
+    color: #9685ff;
+}
+
+
+/* Quiz Area */
+
+.quiz-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#questionCounter {
+    font-size: 18px;
+}
+
+.timer {
+    background: #292a3b;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #ffbd69;
+}
+
+#questionText {
+    font-size: 23px;
+    margin: 30px 0;
+}
+
+
+/* Progress Bar */
+
+.progress-track {
+    width: 100%;
+    height: 9px;
+    background: #303044;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #9685ff;
+    transition: 0.3s;
+}
+
+
+/* Answer Options */
+
+#optionsContainer {
+    display: grid;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.option-btn {
+    width: 100%;
+    background: #292a3b;
+    color: white;
+    border: 1px solid #41425a;
+    text-align: left;
+}
+
+#feedback {
+    min-height: 24px;
+    font-weight: bold;
+}
+
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#previousBtn {
+    background: #41425a;
+    color: white;
+}
+
+
+/* Results and Review */
+
+.review-heading {
+    margin: 30px 0 20px;
+}
+
+.review-item {
+    background: #292a3b;
+    border: 1px solid #41425a;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.review-item p {
+    margin: 8px 0;
+}
+
+.correct-text {
+    color: #50d890;
+}
+
+.wrong-text {
+    color: #ff7777;
+}
+
+#restartBtn {
+    margin-top: 20px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Hidden Screens */
+
+.hidden {
+    display: none;
+}
+
+
+/* Light Mode */
+
+body.light {
+    background: #f4f4fc;
+    color: #202137;
+}
+
+body.light section {
+    background: white;
+    border-color: #dddded;
+}
+
+body.light header {
+    border-color: #dddded;
+}
+
+body.light #themeToggle {
+    background: #e5e5f5;
+    color: #202137;
+}
+
+body.light .option-btn {
+    background: #eeeeF8;
+    color: #202137;
+    border-color: #dddded;
+}
+
+body.light #previousBtn {
+    background: #dddded;
+    color: #202137;
+}
+
+body.light .timer {
+    background: #eeeeF8;
+    color: #8b5b00;
+}
+
+body.light .review-item {
+    background: #f4f4fc;
+    border-color: #dddded;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+    main {
+        margin: 40px auto;
+    }
+
+    section {
+        padding: 25px 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    #questionText {
+        font-size: 19px;
+    }
+
+    .quiz-top {
+        flex-direction: column;
+    }
+
+    .navigation button {
+        flex: 1;
+    }
+
+}
